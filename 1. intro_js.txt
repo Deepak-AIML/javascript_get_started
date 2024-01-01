@@ -1,0 +1,288 @@
+// define variable in js -> (let, var, const)
+// let -> can change value of variable
+// const -> can't change value of variable
+let a = 1;
+a = 2;
+console.log(a);
+
+// data types -> string, boolean and number
+let firstName = "deepak";
+let age = 18;
+let isMarried = false;
+console.log("this person name is " + firstName + " and his age is " + age);
+
+// if else
+if (isMarried == true) {
+  console.log("this person is married");
+} else {
+  console.log("this person is not married");
+}
+
+// write program that count value from 0 to 100
+let answer = 0;
+for (let i = 0; i <= 10; i++) {
+  answer = answer + i;
+}
+
+// arrays
+// print if age inside array is even
+const ages = [18, 20, 22, 24, 26, 28, 30];
+const len_ages = ages.length;
+
+for (let i = 0; i < len_ages; i++) {
+  if (ages[i] % 2 == 0) {
+    console.log(ages[i]);
+  }
+}
+
+// print greatest number in array
+const numbers = [42, 15, 78, 23, 56, 91];
+const len_numbers = numbers.length;
+
+let greatestNumber = 0;
+for (i = 0; i < len_numbers; i++) {
+  if (numbers[i] > greatestNumber) {
+    greatestNumber = numbers[i];
+  }
+}
+console.log("greatest number, " + greatestNumber);
+
+// Objects
+// write program that prints all the male perople's first name given complex object
+const allUsers = [
+  {
+    name: "deepak",
+    age: 18,
+    gender: "male",
+  },
+  {
+    name: "rahul",
+    age: 20,
+    gender: "male",
+  },
+  {
+    name: "sneha",
+    age: 22,
+    gender: "female",
+  },
+];
+
+for (let i = 0; i < allUsers.length; i++) {
+  if (allUsers[i].gender == "male") {
+    console.log(allUsers[i].name);
+  }
+}
+
+// write program that reverse all the elements of an array
+
+// Functions
+// write function that find sum of two numbers
+function sum(a, b) {
+  const sumValue = a + b;
+  return sumValue;
+}
+
+const value = sum(1, 2);
+console.log(value);
+
+// callbacks -> function taking another function as an argument
+
+
+//// JS inbuilt functions
+
+// length: to calculate string length
+const str = "deepak kapoor"
+console.log(str.length);
+
+// indexof: returns index of target string, if not5 found return -1
+console.log(str.indexOf('k'));
+
+// str.lastIndexOf: used when words are repeating and we need index of last word.
+
+// str.slice
+console.log(str.slice(0,5));
+
+// check substr function
+
+// str.replace
+
+// str.split
+
+// str.trim
+
+// .toUpper, .toLower
+
+// parseInt -> pasre int value
+console.log(parseInt("42")); // returns 42
+console.log(parseInt("xxxx42")); // returns NaN
+console.log(parseInt("xxxx42abasacbab")); // returns NaN
+console.log(parseInt("42abasacbab")); // returns 42
+console.log(parseInt("7.65")); // returns 7
+
+// array functions 
+// push
+// pop
+// shift
+// unshift
+// concat
+
+// forEach
+const initialArray = [1,2,3];
+
+function logThing(str) {
+    console.log(str);
+}
+
+initialArray.forEach(logThing)
+
+// class
+class Animal {
+  constructor(name, legCount) {
+    this.name = name
+    this.legCount = legCount
+  }
+  
+  //static method -> can be called with instantiating class
+  static myType() {
+      console.log('Animal')
+  }
+  
+  describe() {
+    return `${this.name} has ${this.legCount} legs`
+  }
+}
+
+Animal.myType()
+let dog = new Animal('dog', 4);
+console.log(dog.describe());
+
+
+//// date related functions
+const currentDate = new Date();
+console.log("Current Date:", currentDate);
+
+// Getting various components of the date
+console.log("Date:", currentDate.getDate());
+console.log("Month:", currentDate.getMonth() + 1); // Months are zero-indexed, so adding 1
+console.log("Year:", currentDate.getFullYear());
+console.log("Hours:", currentDate.getHours());
+console.log("Minutes:", currentDate.getMinutes());
+console.log("Seconds:", currentDate.getSeconds());
+
+// Setting components of the date
+currentDate.setFullYear(2022);
+console.log("After setFullYear:", currentDate);
+
+currentDate.setMonth(5); // Setting month to June (zero-indexed)
+console.log("After setMonth:", currentDate);
+
+// Getting and setting time in milliseconds since 1970
+console.log("Time in milliseconds since 1970:", currentDate.getTime());
+
+const newDate = new Date(2023, 8, 15); // Creating a new date
+console.log("New Date:", newDate);
+
+//// JSON
+function jsonMethods(jsonString) {
+  console.log("Original JSON String:", jsonString);
+
+  // Parsing JSON string to JavaScript object
+  let parsedObject = JSON.parse(jsonString);
+  console.log("After JSON.parse():", parsedObject);
+
+  // Stringifying JavaScript object to JSON string
+  let jsonStringified = JSON.stringify(parsedObject);
+  console.log("After JSON.stringify():", jsonStringified);
+}
+
+// Example Usage for JSON Methods
+const sampleJSONString =
+  '{"key": "value", "number": 42, "nested": {"nestedKey": "nestedValue"}}';
+
+jsonMethods(sampleJSONString);
+
+
+//// MATH
+function mathMethods(value) {
+  console.log("Original Value:", value);
+
+  let rounded = Math.round(value);
+  console.log("After round():", rounded);
+
+  let ceiling = Math.ceil(value);
+  console.log("After ceil():", ceiling);
+
+  let flooring = Math.floor(value);
+  console.log("After floor():", flooring);
+
+  let randomValue = Math.random();
+  console.log("After random():", randomValue);
+
+  let maxValue = Math.max(5, 10, 15);
+  console.log("After max():", maxValue);
+
+  let minValue = Math.min(5, 10, 15);
+  console.log("After min():", minValue);
+
+  let powerOfTwo = Math.pow(value, 2);
+  console.log("After pow():", powerOfTwo);
+
+  let squareRoot = Math.sqrt(value);
+  console.log("After sqrt():", squareRoot);
+}
+
+// Example Usage for Math Methods
+mathMethods(4.56);
+mathMethods(9);
+mathMethods(25);
+
+
+
+//// Objects method
+// Object Methods Explanation
+function objectMethods(obj) {
+  console.log("Original Object:", obj);
+
+  let keys = Object.keys(obj);
+  console.log("After Object.keys():", keys);
+
+  let values = Object.values(obj);
+  console.log("After Object.values():", values);
+
+  let entries = Object.entries(obj);
+  console.log("After Object.entries():", entries);
+
+  let hasProp = obj.hasOwnProperty("property");
+  console.log("After hasOwnProperty():", hasProp);
+
+  let newObj = Object.assign({}, obj, { newProperty: "newValue" });
+  console.log("After Object.assign():", newObj);
+
+
+}
+
+// Example Usage for Object Methods
+const sampleObject = {
+  key1: "value1",
+  key2: "value2",
+  key3: "value3",
+};
+
+objectMethods(sampleObject);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

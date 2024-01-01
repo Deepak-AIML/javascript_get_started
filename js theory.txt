@@ -1,0 +1,36 @@
+Interpreted vs Compiled language
+
+Compiled languages:  first need to compile, then need to run. Usually don't compile if there is an error in the code. Example: C++,  Java, rust, golang
+Interpreted languages: usualyy go line by line. Can run partially if the error comes later. Eg: js, python.
+
+Javascript  -> Interpreted language
+
+// ran code partially
+console.log("hello world");
+console.log(a); // returned error here
+
+javascript advantage: Browser can understand html/css/js (standard was set in industry)
+Thanks to node js, js can be used for backend development
+
+javascript is loosely types.
+
+let number = 5; // variable initially holds a number
+number = "Hello"; // variable now holds string
+console.log(number); // outputs hello
+
+Single threaded:
+Multi threaded:
+
+JS is single threaded.
+
+synchornous vs async functions
+sync -> together, one after the other, sequential.
+async -> opposite of sync, multiple things are context switching.
+
+Promises -> promises are syntatical sugar that makes code more readable.
+
+
+
+
+
+		
